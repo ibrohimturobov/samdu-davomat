@@ -1,0 +1,240 @@
+:root {
+    --navy: #0f2557;
+    --gold: #e0a526;
+    --sky: #e8eef9;
+    --ink: #1b2335;
+    --line: #cfd8ea
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    font-family: "Trebuchet MS", Verdana, sans-serif;
+    color: var(--ink);
+    background: #f6f8fc;
+    line-height: 1.6
+}
+
+h1,
+h2,
+h3 {
+    font-family: Georgia, serif;
+    color: var(--navy)
+}
+
+.top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    min-height: 64px;
+    background: var(--navy);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 8px 24px;
+    z-index: 10
+}
+.top img {
+    height: 44px;
+    background: #fff;
+    border-radius: 6px
+}
+.top strong {
+    color: #fff;
+    font-size: 1.1rem
+}
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    list-style: none;
+    margin: 0;
+    padding: 0
+}
+
+nav a {
+    display: block;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background .3s }
+nav a:hover,
+nav a.on {
+    background: var(--gold);
+    color: var(--navy)}
+main{
+    max-width: 1000px;
+    margin: 100px auto 40px;
+    padding: 0 20px }
+.hero {
+    position: relative;
+    background: var(--navy);
+    color: #fff;
+    padding: 48px 32px;
+    border-radius: 12px;
+    margin-bottom: 24px }
+.hero h1 {
+    color: #fff;
+    margin: 0 0 8px;
+    animation: kirish 1.2s ease both }
+.hero .belgi {
+    position: absolute;
+    right: 24px;
+    top: 24px;
+    background: var(--gold);
+    color: var(--navy);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-weight: bold
+}
+@keyframes kirish {
+    from {
+        opacity: 0;
+        transform: translateY(-24px)
+    }
+
+    to {
+        opacity: 1;
+        transform: none
+    }
+}
+
+section {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px
+}
+
+.ikki {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap
+}
+
+.ikki>* {
+    flex: 1 1 300px
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%
+}
+th {
+    background: var(--navy);
+    color: #fff}
+th,
+td {
+    border: 1px solid var(--line);
+    padding: 8px;
+    text-align: left}
+tr:nth-child(even) td {
+    background: var(--sky)}
+td.ha {
+    color: #0a7a3d;
+    font-weight: bold
+}
+td.yoq {
+    color: #b3261e;
+    font-weight: bold
+}
+img.rasm {
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(15, 37, 87, .25);
+    transition: transform .3s
+}
+img.rasm:hover {
+    transform: scale(1.03)
+}
+
+video,
+audio {
+    width: 100%;
+    border-radius: 8px
+}
+
+label {
+    display: block;
+    margin: 12px 0 4px;
+    font-weight: bold
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    font: inherit
+}
+
+input[type="date"] {
+    max-width: 220px
+}
+
+input[type="radio"] {
+    width: auto
+}
+
+button {
+    background: var(--navy);
+    color: #fff;
+    border: 0;
+    padding: 10px 22px;
+    margin-top: 14px;
+    border-radius: 6px;
+    font: inherit;
+    cursor: pointer;
+    transition: background .3s
+}
+
+button:hover {
+    background: var(--gold);
+    color: var(--navy)
+}
+
+#qoida {
+    border-left: 6px solid var(--gold);
+    background: var(--sky);
+    padding: 12px 16px
+}
+
+footer {
+    background: var(--navy);
+    color: #fff;
+    text-align: center;
+    padding: 20px
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+    outline: 3px solid var(--gold)
+}
+
+@media(max-width:760px) {
+    main {
+        margin-top: 150px
+    }
+
+    .hero .belgi {
+        position: static;
+        display: inline-block;
+        margin-bottom: 10px
+    }
+}
+
+@media(prefers-reduced-motion:reduce) {
+    * {
+        animation: none !important;
+        transition: none !important
+    }
+}
