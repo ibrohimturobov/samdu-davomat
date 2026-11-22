@@ -4,42 +4,66 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Fakultetlar | SamDU SI va RT davomat</title>
-<link rel="stylesheet" href="css/style.css">
-
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-<header class="top">
-<img src="images/logo.png" alt="SamDU logotipi">
-<strong>SamDU SI va RT davomat</strong>
-<nav><ul><li><a href="index.html">Bosh sahifa</a></li><li><a href="fakultetlar.html" class="on">Fakultetlar</a></li><li><a href="davomat.html">Davomat</a></li><li><a href="qoldirilgan.html">Qoldirilgan darslar</a></li><li><a href="media.html">Media</a></li><li><a href="aloqa.html">Aloqa</a></li></ul></nav>
-</header>
-<main>
-<h1>SamDU fakultetlari va fakultet guruhlari</h1>
-<section>
-<h2>Universitet fakultet va institutlari</h2>
-<ul>
-<li>Filologiya fakulteti</li>
-<li>Tarix fakulteti</li>
-<li>Matematika fakulteti</li>
-<li>Fizika fakulteti</li>
-<li>Agrobiotexnologiyalar va oziq-ovqat xavfsizligi instituti</li>
-<li>Biokimyo instituti</li>
-<li><strong>Sun’iy intellekt va raqamli texnologiyalar fakulteti</strong></li>
-</ul>
-</section>
-<section>
-<h2>Sun’iy intellekt va raqamli texnologiyalar fakulteti guruhlari</h2>
-<table>
-<tr><th>Yo‘nalish</th><th>Guruh</th><th>Kurs</th><th>Talabalar soni</th></tr>
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+<div class="container">
+<a class="navbar-brand d-flex align-items-center gap-2" href="index.html"><img src="images/logo.png" alt="SamDU logotipi"><strong>SamDU davomat</strong></a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menyu" aria-controls="menyu" aria-expanded="false" aria-label="Menyuni ochish"><span class="navbar-toggler-icon"></span></button>
+<div class="collapse navbar-collapse" id="menyu">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house"></i> Bosh sahifa</a></li>
+<li class="nav-item"><a class="nav-link active" aria-current="page" href="fakultetlar.html"><i class="bi bi-building"></i> Fakultetlar</a></li>
+<li class="nav-item"><a class="nav-link" href="davomat.html"><i class="bi bi-calendar-check"></i> Davomat</a></li>
+<li class="nav-item"><a class="nav-link" href="qoldirilgan.html"><i class="bi bi-journal-x"></i> Qoldirilgan darslar</a></li>
+<li class="nav-item"><a class="nav-link" href="media.html"><i class="bi bi-play-circle"></i> Media</a></li>
+<li class="nav-item"><a class="nav-link" href="aloqa.html"><i class="bi bi-telephone"></i> Aloqa</a></li>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-three-dots"></i> Yana</a>
+<ul class="dropdown-menu dropdown-menu-end">
+<li><a class="dropdown-item" href="davomat.html">Guruh davomati</a></li>
+<li><a class="dropdown-item" href="qoldirilgan.html">Qoldirilgan darslar</a></li>
+<li><hr class="dropdown-divider"></li>
+<li><a class="dropdown-item" href="aloqa.html">Bog‘lanish</a></li>
+</ul></li>
+</ul></div></div></nav>
+<main class="container my-4">
+<h1 class="mb-4">SamDU fakultetlari va fakultet guruhlari</h1>
+<div class="row g-4">
+<div class="col-12 col-lg-5">
+<h2 class="h4">Universitet fakultet va institutlari</h2>
+<ul class="list-group">
+<li class="list-group-item"><i class="bi bi-book"></i> Filologiya fakulteti</li>
+<li class="list-group-item"><i class="bi bi-bank"></i> Tarix fakulteti</li>
+<li class="list-group-item"><i class="bi bi-calculator"></i> Matematika fakulteti</li>
+<li class="list-group-item"><i class="bi bi-lightning-charge"></i> Fizika fakulteti</li>
+<li class="list-group-item"><i class="bi bi-flower1"></i> Agrobiotexnologiyalar va oziq-ovqat xavfsizligi instituti</li>
+<li class="list-group-item"><i class="bi bi-capsule"></i> Biokimyo instituti</li>
+<li class="list-group-item active"><i class="bi bi-cpu"></i> <strong>Sun’iy intellekt va raqamli texnologiyalar fakulteti</strong></li>
+</ul></div>
+<div class="col-12 col-lg-7">
+<h2 class="h4">SI va RT fakulteti guruhlari</h2>
+<div class="table-responsive">
+<table class="table table-striped table-hover table-bordered align-middle">
+<thead><tr><th>Yo‘nalish</th><th>Guruh</th><th>Kurs</th><th>Talabalar soni</th></tr></thead>
+<tbody>
 <tr><td>Dasturiy injiniring</td><td>DI-101</td><td>1</td><td>25</td></tr>
 <tr><td>Dasturiy injiniring</td><td>DI-102</td><td>1</td><td>27</td></tr>
 <tr><td>Sun’iy intellekt</td><td>SI-101</td><td>1</td><td>24</td></tr>
 <tr><td>Sun’iy intellekt</td><td>SI-102</td><td>1</td><td>26</td></tr>
-</table>
-</section>
+</tbody></table></div>
+<span class="badge text-bg-primary" data-bs-toggle="tooltip" data-bs-title="Barcha guruhlar yig‘indisi">Jami: 102 talaba</span>
+</div></div>
 </main>
-<footer>
-<p style="margin:0">&copy; 2026 Sharof Rashidov nomidagi Samarqand davlat universiteti, Sun’iy intellekt va raqamli texnologiyalar fakulteti.</p>
-</footer>
+<footer class="py-4 mt-5 text-center">
+<div class="container">
+<p class="mb-1">&copy; 2026 Sharof Rashidov nomidagi Samarqand davlat universiteti, Sun’iy intellekt va raqamli texnologiyalar fakulteti.</p>
+<p class="mb-0 small"><i class="bi bi-person-fill"></i> Muallif: Yangiboyev Asadbek</p>
+</div></footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>

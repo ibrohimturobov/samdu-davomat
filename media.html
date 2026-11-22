@@ -4,39 +4,55 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Media | SamDU SI va RT davomat</title>
-<link rel="stylesheet" href="css/style.css">
-
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-<header class="top">
-<img src="images/logo.jpg" alt="SamDU logotipi">
-<strong>SamDU SI va RT davomat</strong>
-<nav><ul><li><a href="index.html">Bosh sahifa</a></li><li><a href="fakultetlar.html">Fakultetlar</a></li><li><a href="davomat.html">Davomat</a></li><li><a href="qoldirilgan.html">Qoldirilgan darslar</a></li><li><a href="media.html" class="on">Media</a></li><li><a href="aloqa.html">Aloqa</a></li></ul></nav>
-</header>
-<main>
-
-<h1>Media markaz</h1>
-<section>
-<h2>Fotogalereya</h2>
-<div class="ikki">
-<img class="rasm" src="images/rasm1.jpg" alt="Universitet binosi">
-<img class="rasm" src="images/rasm2.webp" alt="Auditoriya">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+<div class="container">
+<a class="navbar-brand d-flex align-items-center gap-2" href="index.html"><img src="images/logo.png" alt="SamDU logotipi"><strong>SamDU davomat</strong></a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menyu" aria-controls="menyu" aria-expanded="false" aria-label="Menyuni ochish"><span class="navbar-toggler-icon"></span></button>
+<div class="collapse navbar-collapse" id="menyu">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house"></i> Bosh sahifa</a></li>
+<li class="nav-item"><a class="nav-link" href="fakultetlar.html"><i class="bi bi-building"></i> Fakultetlar</a></li>
+<li class="nav-item"><a class="nav-link" href="davomat.html"><i class="bi bi-calendar-check"></i> Davomat</a></li>
+<li class="nav-item"><a class="nav-link" href="qoldirilgan.html"><i class="bi bi-journal-x"></i> Qoldirilgan darslar</a></li>
+<li class="nav-item"><a class="nav-link active" aria-current="page" href="media.html"><i class="bi bi-play-circle"></i> Media</a></li>
+<li class="nav-item"><a class="nav-link" href="aloqa.html"><i class="bi bi-telephone"></i> Aloqa</a></li>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-three-dots"></i> Yana</a>
+<ul class="dropdown-menu dropdown-menu-end">
+<li><a class="dropdown-item" href="davomat.html">Guruh davomati</a></li>
+<li><a class="dropdown-item" href="qoldirilgan.html">Qoldirilgan darslar</a></li>
+<li><hr class="dropdown-divider"></li>
+<li><a class="dropdown-item" href="aloqa.html">Bog‘lanish</a></li>
+</ul></li>
+</ul></div></div></nav>
+<main class="container my-4">
+<h1 class="mb-4">Media markaz</h1>
+<div class="card shadow-sm mb-4"><div class="card-body">
+<h2 class="h4"><i class="bi bi-images"></i> Fotogalereya</h2>
+<div class="row g-3">
+<div class="col-12 col-md-6"><img class="img-fluid rounded shadow-sm w-100" src="images/rasm1.jpg" alt="Universitet binosi" data-bs-toggle="tooltip" data-bs-title="Universitet binosi"></div>
+<div class="col-12 col-md-6"><img class="img-fluid rounded shadow-sm w-100" src="images/rasm2.webp" alt="Auditoriya" data-bs-toggle="tooltip" data-bs-title="Auditoriya"></div>
+</div></div></div>
+<div class="row g-4">
+<div class="col-12 col-lg-5"><div class="card h-100 shadow-sm"><div class="card-body">
+<h2 class="h4"><i class="bi bi-music-note-beamed"></i> Audio</h2>
+<audio controls loop src="audio/madhiya.mp3" class="w-100">Brauzer audio qo‘llamaydi.</audio></div></div></div>
+<div class="col-12 col-lg-7"><div class="card h-100 shadow-sm"><div class="card-body">
+<h2 class="h4"><i class="bi bi-camera-video"></i> Video</h2>
+<div class="ratio ratio-16x9"><video controls loop autoplay poster="images/rasm1.svg" src="video/video.mp4">Brauzer video qo‘llamaydi.</video></div></div></div></div>
 </div>
-</section>
-<section class="ikki">
-<div>
-<h2>Audio</h2>
-<audio controls  loop  src="audio/madhiya.mp3">Brauzer audio qo‘llamaydi.</audio>
-</div>
-<div>
-<h2>Video</h2>
-<video controls loop autoplay poster="images/rasm1.svg" src="video/video.mp4">Brauzer video qo‘llamaydi.</video>
-</div>
-</section>
-
 </main>
-<footer>
-<p style="margin:0">&copy; 2026 Sharof Rashidov nomidagi Samarqand davlat universiteti, Sun’iy intellekt va raqamli texnologiyalar fakulteti.</p>
-</footer>
+<footer class="py-4 mt-5 text-center">
+<div class="container">
+<p class="mb-1">&copy; 2026 Sharof Rashidov nomidagi Samarqand davlat universiteti, Sun’iy intellekt va raqamli texnologiyalar fakulteti.</p>
+<p class="mb-0 small"><i class="bi bi-person-fill"></i> Muallif: Yangiboyev Asadbek</p>
+</div></footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>

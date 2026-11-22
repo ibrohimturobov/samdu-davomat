@@ -4,46 +4,65 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Qoldirilgan darslar | SamDU SI va RT davomat</title>
-<link rel="stylesheet" href="css/style.css">
-
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-<header class="top">
-<img src="images/logo.png" alt="SamDU logotipi">
-<strong>SamDU SI va RT davomat</strong>
-<nav><ul><li><a href="index.html">Bosh sahifa</a></li><li><a href="fakultetlar.html">Fakultetlar</a></li><li><a href="davomat.html">Davomat</a></li><li><a href="qoldirilgan.html" class="on">Qoldirilgan darslar</a></li><li><a href="media.html">Media</a></li><li><a href="aloqa.html">Aloqa</a></li></ul></nav>
-</header>
-<main>
-
-<h1>Dars qoldirish sababi</h1>
-<section class="ikki">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+<div class="container">
+<a class="navbar-brand d-flex align-items-center gap-2" href="index.html"><img src="images/logo.png" alt="SamDU logotipi"><strong>SamDU davomat</strong></a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menyu" aria-controls="menyu" aria-expanded="false" aria-label="Menyuni ochish"><span class="navbar-toggler-icon"></span></button>
+<div class="collapse navbar-collapse" id="menyu">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house"></i> Bosh sahifa</a></li>
+<li class="nav-item"><a class="nav-link" href="fakultetlar.html"><i class="bi bi-building"></i> Fakultetlar</a></li>
+<li class="nav-item"><a class="nav-link" href="davomat.html"><i class="bi bi-calendar-check"></i> Davomat</a></li>
+<li class="nav-item"><a class="nav-link active" aria-current="page" href="qoldirilgan.html"><i class="bi bi-journal-x"></i> Qoldirilgan darslar</a></li>
+<li class="nav-item"><a class="nav-link" href="media.html"><i class="bi bi-play-circle"></i> Media</a></li>
+<li class="nav-item"><a class="nav-link" href="aloqa.html"><i class="bi bi-telephone"></i> Aloqa</a></li>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-three-dots"></i> Yana</a>
+<ul class="dropdown-menu dropdown-menu-end">
+<li><a class="dropdown-item" href="davomat.html">Guruh davomati</a></li>
+<li><a class="dropdown-item" href="qoldirilgan.html">Qoldirilgan darslar</a></li>
+<li><hr class="dropdown-divider"></li>
+<li><a class="dropdown-item" href="aloqa.html">Bog‘lanish</a></li>
+</ul></li>
+</ul></div></div></nav>
+<main class="container my-4">
+<h1 class="mb-4">Dars qoldirish sababi</h1>
+<div class="row g-4">
+<div class="col-12 col-lg-7"><div class="card shadow-sm"><div class="card-body">
 <form action="#" method="post">
-<label for="ism">F.I.Sh.</label>
-<input type="text" id="ism" name="ism" required>
-<label for="guruh">Guruh</label>
-<select id="guruh" name="guruh"><option>DI-101</option><option>DI-102</option><option>SI-101</option><option>SI-102</option></select>
-<label for="sana">Qoldirilgan sana</label>
-<input type="date" id="sana" name="sana">
-<label>Sabab</label>
-<input type="radio" name="sabab" value="kasal" checked> Kasallik
-<input type="radio" name="sabab" value="oila"> Oilaviy
-<input type="radio" name="sabab" value="boshqa"> Boshqa
-<label for="izoh">Izoh</label>
-<textarea id="izoh" name="izoh" rows="4"></textarea>
-<label for="fayl">Hujjat</label>
-<input type="file" id="fayl" name="fayl">
-<button type="submit">Arizani yuborish</button>
-</form>
-<div>
-<h2>Namuna va nizom</h2>
-<p><a href="docs/nizom.pdf">Davomat nizomini yuklab olish (PDF)</a></p>
-<p><a href="docs/ariza.pdf">Ariza namunasini yuklab olish (PDF)</a></p>
+<div class="mb-3"><label for="ism" class="form-label">F.I.Sh.</label><input type="text" id="ism" name="ism" class="form-control" required></div>
+<div class="row g-3 mb-3">
+<div class="col-12 col-sm-6"><label for="guruh" class="form-label">Guruh</label>
+<select id="guruh" name="guruh" class="form-select"><option>DI-101</option><option>DI-102</option><option>SI-101</option><option>SI-102</option></select></div>
+<div class="col-12 col-sm-6"><label for="sana" class="form-label">Qoldirilgan sana</label><input type="date" id="sana" name="sana" class="form-control"></div>
 </div>
-</section>
-
+<div class="mb-3"><span class="form-label d-block fw-semibold">Sabab</span>
+<div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="sabab" id="s1" value="kasal" checked><label class="form-check-label" for="s1">Kasallik</label></div>
+<div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="sabab" id="s2" value="oila"><label class="form-check-label" for="s2">Oilaviy</label></div>
+<div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="sabab" id="s3" value="boshqa"><label class="form-check-label" for="s3">Boshqa</label></div></div>
+<div class="mb-3"><label for="izoh" class="form-label">Izoh</label><textarea id="izoh" name="izoh" rows="4" class="form-control"></textarea></div>
+<div class="mb-3"><label for="fayl" class="form-label">Hujjat</label><input type="file" id="fayl" name="fayl" class="form-control"></div>
+<button type="submit" class="btn btn-primary"><i class="bi bi-send"></i> Arizani yuborish</button>
+</form></div></div></div>
+<div class="col-12 col-lg-5"><div class="card shadow-sm">
+<div class="card-header"><i class="bi bi-folder2-open"></i> Namuna va nizom</div>
+<ul class="list-group list-group-flush">
+<li class="list-group-item"><a href="docs/nizom.pdf" data-bs-toggle="tooltip" data-bs-title="PDF faylni yuklab olish"><i class="bi bi-file-earmark-pdf text-danger"></i> Davomat nizomini yuklab olish (PDF)</a></li>
+<li class="list-group-item"><a href="docs/ariza.pdf" data-bs-toggle="tooltip" data-bs-title="PDF faylni yuklab olish"><i class="bi bi-file-earmark-pdf text-danger"></i> Ariza namunasini yuklab olish (PDF)</a></li>
+</ul></div></div>
+</div>
 </main>
-<footer>
-<p style="margin:0">&copy; 2026 Sharof Rashidov nomidagi Samarqand davlat universiteti, Sun’iy intellekt va raqamli texnologiyalar fakulteti.</p>
-</footer>
+<footer class="py-4 mt-5 text-center">
+<div class="container">
+<p class="mb-1">&copy; 2026 Sharof Rashidov nomidagi Samarqand davlat universiteti, Sun’iy intellekt va raqamli texnologiyalar fakulteti.</p>
+<p class="mb-0 small"><i class="bi bi-person-fill"></i> Muallif: Yangiboyev Asadbek</p>
+</div></footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
